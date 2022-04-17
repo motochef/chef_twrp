@@ -19,6 +19,10 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-service
 
 PRODUCT_PACKAGES += \
+    libgptutils.sdm660 \
+    libgptutils.sdm660.recovery
+
+PRODUCT_PACKAGES += \
     bootctrl.sdm660
 
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
