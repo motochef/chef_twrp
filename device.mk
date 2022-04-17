@@ -27,7 +27,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     bootctrl.sdm660 \
-    libgptutils \
+    libgptutils.sdm660.recovery \
     libz \
     libcutils
 
