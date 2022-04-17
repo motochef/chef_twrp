@@ -11,6 +11,7 @@ DEVICE_PATH := device/motorola/chef
 TARGET_BOARD_PLATFORM := sdm660
 TARGET_BOOTLOADER_BOARD_NAME := sdm660
 TARGET_NO_BOOTLOADER := true
+TARGET_SUPPORTS_64_BIT_APPS := true
 TARGET_USES_UEFI := true
 TARGET_USES_64_BIT_BINDER := true
 
@@ -31,25 +32,24 @@ TARGET_2ND_CPU_VARIANT := generic
 AB_OTA_UPDATER := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE:= \
+BOARD_KERNEL_CMDLINE := \
     console=ttyMSM0,115200,n8 \
-	androidboot.console=ttyMSM0 \
-	earlycon=msm_serial_dm,0xc170000 \
-	androidboot.hardware=qcom \
-	user_debug=31 msm_rtb.filter=0x37 \
-	ehci-hcd.park=3 \
-	lpm_levels.sleep_disabled=1 \
-	sched_enable_hmp=1 \
-	sched_enable_power_aware=1 \
-	service_locator.enable=1 \
-	swiotlb=1 \
-	loop.max_part=7 \
-	androidboot.hab.csv=38 \
-	androidboot.hab.product=chef \
-	androidboot.hab.cid=50 \
-	buildvariant=user \
-	veritykeyid=id:b640f6ee9102b88daa3450b13ef25fc9eb143d63 \
-	androidboot.fastboot=1
+    androidboot.console=ttyMSM0 \
+    earlycon=msm_serial_dm,0xc170000 \
+    androidboot.hardware=qcom \
+    user_debug=31 \
+    msm_rtb.filter=0x37 \
+    ehci-hcd.park=3 \
+    lpm_levels.sleep_disabled=1 \
+    sched_enable_hmp=1 \
+    sched_enable_power_aware=1 \
+    service_locator.enable=1 \
+    swiotlb=1 \
+    androidboot.hab.csv=2 \
+    androidboot.hab.product=chef \
+    androidboot.hab.cid=50 \
+    androidboot.selinux=permissive \
+    androidboot.fastboot=1
 
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
